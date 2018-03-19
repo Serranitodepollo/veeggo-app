@@ -16,7 +16,7 @@ import { Switch, Route } from 'react-router-dom';
 import AppShell from 'AppShell';
 // import StyledCoreLayout from './style';
 import styles from './styles.css';
-
+import { Login } from 'views';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class CoreLayout extends PureComponent {
@@ -28,11 +28,7 @@ class CoreLayout extends PureComponent {
             <Route
               exact
               path="/"
-              component={() => (
-                <div>
-                  <h1>Hello World</h1>
-                </div>
-              )}
+              component={Login}
             />
           </Switch>
         </AppShell>
