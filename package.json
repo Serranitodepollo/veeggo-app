@@ -8,13 +8,13 @@
     "node": ">=6"
   },
   "scripts": {
-    "build": "babel-node ./tools/scripts/build.js",
+    "build": "node ./tools/scripts/build.js",
     "build:temp": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "build:dll": "babel-node ./tools/scripts/dependencies.js",
+    "build:dll": "node ./tools/scripts/dependencies.js",
     "build:clean": "rimraf ./build",
     "clean": "shjs ./tools/scripts/clean.js",
     "clean:dll": "rimraf ./node_modules/react-dll",
-    "extract-intl": "babel-node -- ./tools/scripts/extract-intl.js",
+    "extract-intl": "node -- ./tools/scripts/extract-intl.js",
     "generate": "plop --plopfile ./tools/generators/index.js",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern tools/scripts",
@@ -23,7 +23,7 @@
     "prebuild": "npm run build:clean",
     "preinstall": "npm run npmcheckversion",
     "prestart": "npm run clean:dll && npm run build:dll",
-    "start": "babel-node ./tools/scripts/start.js"
+    "start": "node ./tools/scripts/start.js"
   },
   "keywords": [
     "react",
