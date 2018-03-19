@@ -17,9 +17,14 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 {{/if}}
 import { compose } from 'redux';
+import {
 {{#if wantSaga}}
-import injectSaga from 'utils/injectSaga';
+  injectSaga,
 {{/if}}
+{{#if wantActionsAndReducer}}
+  injectReducer,
+{{/if}}
+} from 'utils/config';
 {{#if wantActionsAndReducer}}
 import injectReducer from 'utils/injectReducer';
 import makeSelect{{properCase name}} from './selectors';

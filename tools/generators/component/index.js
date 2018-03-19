@@ -30,6 +30,11 @@ module.exports = {
     },
   }, {
     type: 'confirm',
+    name: 'wantStyle',
+    default: true,
+    message: 'Do you want style in your component?',
+  }, {
+    type: 'confirm',
     name: 'wantMessages',
     default: true,
     message: 'Do you want i18n messages (i.e. will this component use text)?',
@@ -69,6 +74,16 @@ module.exports = {
       templateFile: './component/test.js.hbs',
       abortOnFail: true,
     }];
+
+    // If they want a i18n messages file
+    if (data.wantStyle) {
+      actions.push({
+        type: 'add',
+        path: '../../src/generators/{{properCase name}}/style.js',
+        templateFile: './component/style.css.hbs',
+        abortOnFail: true,
+      });
+    }
 
     // If they want a i18n messages file
     if (data.wantMessages) {

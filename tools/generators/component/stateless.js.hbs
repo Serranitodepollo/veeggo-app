@@ -6,8 +6,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
-
+{{#if wantStyle}}
+import styles from './{{properCase name}}.css';
+{{/if}}
 {{#if wantMessages}}
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
