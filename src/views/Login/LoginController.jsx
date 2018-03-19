@@ -20,25 +20,20 @@ import makeSelectLogin from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import messages from './messages';
+import Login from './Login';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class LoginContainer extends React.Component {
+class LoginController extends React.Component {
   render() {
     const { props } = this;
 
     return (
-      <div>
-        <Helmet>
-          <title>Login</title>
-          <meta name="description" content="Description of Login" />
-        </Helmet>
-        <FormattedMessage {...messages.header} />
-      </div>
+      <Login />
     );
   }
 }
 
-LoginContainer.propTypes = {
+LoginController.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
@@ -60,4 +55,4 @@ export default compose(
   withReducer,
   withSaga,
   withConnect,
-)(LoginContainer);
+)(LoginController);

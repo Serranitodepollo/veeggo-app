@@ -7,7 +7,7 @@ const fs = require('fs-extra');
 const nodeGlob = require('glob');
 const { transform } = require('@babel/core');
 
-const animateProgress = require(./helpers/progress');
+const animateProgress = require('./helpers/progress');
 const addCheckmark = require('./helpers/checkmark');
 const babel = require('../../.babelrc');
 const presets = babel.presets;
