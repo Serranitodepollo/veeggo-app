@@ -1,0 +1,39 @@
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+stats.json
+
+# Cruft
+.DS_Store
+npm-debug.log
+
+# Logs
+logs
+*.log
+
+# Locks
+package-lock.json
+yarn.lock
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Users Environment Variables
+.lock-wscript
+.tsdrc
+.typingsrc
+
+# IDE configuration files
+.idea
+.vscode
+*.iml
+*.sublime-*
+.tern-project
+.imdone
+*.code-workspace
+
+# Plop folder
+src/generators

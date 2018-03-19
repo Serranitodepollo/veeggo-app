@@ -1,0 +1,8 @@
+:root {
+  --height: 100vh;
+}
+
+.container {
+  height: var(--height);
+  overflow: hidden;
+}
